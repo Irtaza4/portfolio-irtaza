@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Archive — Folioblox</title>
+  <meta name="description" content="Explore our complete portfolio of AI interfaces, luxury branding, product designs, and digital architectures.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body class="projects-page-body">
+
+  <!-- Ambient Glow Atmosphere (Orange-Red & Deep Glows with low opacity) -->
+  <div class="ambient-mesh-glow"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-mid-left"></div>
+  <div class="ambient-glow glow-center"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+
+  <!-- Main Content Layer -->
+  <div id="page-content">
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="brand-logo">Folioblox</a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#behind-designs" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+        </nav>
+        <a href="index.html#contact" class="btn-pill-nav">
+          <span>Get in touch</span>
+          <div class="icon-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Projects Hero Title, Subtext & Category Filters -->
+    <section class="projects-hero-section">
+      <div class="projects-container">
+        
+        <div class="glass-pill-tag">
+          <span class="dot-indicator blue"></span>
+          <span>CURATED ARCHIVE (2022 — 2026)</span>
+        </div>
+
+        <div class="projects-hero-grid">
+          <h1 class="projects-hero-title">Selected Works &amp; Digital Architecture</h1>
+          <p class="projects-hero-subtitle">
+            A comprehensive showcase of brand identities, design systems, AI SaaS interfaces, and luxury physical products crafted for high-growth global companies.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Works (6)</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; SaaS UI</button>
+          <button class="filter-btn" data-filter="brand">Brand &amp; Identity</button>
+          <button class="filter-btn" data-filter="physical">Packaging &amp; Physical</button>
+          <button class="filter-btn" data-filter="tech">Automotive &amp; Tech</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: Grid of Projects / Case Studies -->
+    <section class="projects-showcase-section">
+      <div class="projects-container">
+        
+        <div class="projects-main-grid" id="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card" data-category="ai">
+            <div class="project-media-wrap">
+              <img src="assets/ai_workspace.jpg" alt="Aether AI Workspace" loading="lazy">
+              <div class="project-overlay-badge">2025</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">AI &amp; SaaS UI</span>
+                <span class="project-metric-pill">+140% Velocity</span>
+              </div>
+              <h2 class="project-title">Aether AI Workspace</h2>
+              <p class="project-desc">
+                Autonomous AI workflow agent interface enabling enterprise engineering teams to coordinate distributed multi-agent systems with real-time telemetry.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Design System</span>
+                <span class="tag">AI Agent UI</span>
+                <span class="tag">Next.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="physical">
+            <div class="project-media-wrap">
+              <img src="assets/headphones.jpg" alt="Aura Studio Headphones" loading="lazy">
+              <div class="project-overlay-badge">2025</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">Packaging &amp; Physical</span>
+                <span class="project-metric-pill">Red Dot 2025</span>
+              </div>
+              <h2 class="project-title">Aura Studio Headphones</h2>
+              <p class="project-desc">
+                Industrial hardware prototyping, tactile acoustic ergonomics, and precision metallic materials for high-fidelity spatial audio listening.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Industrial Design</span>
+                <span class="tag">Acoustic Hardware</span>
+                <span class="tag">Brand Identity</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="ai">
+            <div class="project-media-wrap">
+              <img src="assets/fintech_app.jpg" alt="Aura Fintech Platform" loading="lazy">
+              <div class="project-overlay-badge">2024</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">AI &amp; SaaS UI</span>
+                <span class="project-metric-pill">$1.8B Volume</span>
+              </div>
+              <h2 class="project-title">Aura Global Liquidity Platform</h2>
+              <p class="project-desc">
+                Next-generation institutional wealth suite featuring real-time biometric verification, AI portfolio intelligence, and frictionless mobile execution.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Fintech</span>
+                <span class="tag">Mobile UX</span>
+                <span class="tag">Data Visualization</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="brand">
+            <div class="project-media-wrap">
+              <img src="assets/bottle.jpg" alt="Noir Botanical Serum" loading="lazy">
+              <div class="project-overlay-badge">2025</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">Brand &amp; Identity</span>
+                <span class="project-metric-pill">120k Units Sold</span>
+              </div>
+              <h2 class="project-title">Noir Botanical Serum</h2>
+              <p class="project-desc">
+                Eco-luxury sustainable packaging identity, tactile basalt stone visual aesthetic, and sensory packaging system for clean clinical skincare.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Luxury Packaging</span>
+                <span class="tag">Brand Strategy</span>
+                <span class="tag">3D Visuals</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="tech">
+            <div class="project-media-wrap">
+              <img src="assets/automotive_ui.jpg" alt="Hyperion EV Hypercar Telemetry" loading="lazy">
+              <div class="project-overlay-badge">2026</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">Automotive &amp; Tech</span>
+                <span class="project-metric-pill">0.02s Latency</span>
+              </div>
+              <h2 class="project-title">Hyperion EV Hypercar In-Cockpit HUD</h2>
+              <p class="project-desc">
+                Real-time electric vehicle telemetry, adaptive cockpit HUD graphics, power distribution analytics, and biometric track telemetry.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Automotive HMI</span>
+                <span class="tag">HUD Graphics</span>
+                <span class="tag">Real-time Telemetry</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card" data-category="physical">
+            <div class="project-media-wrap">
+              <img src="assets/jacket.jpg" alt="Nordic Minimalist Outerwear" loading="lazy">
+              <div class="project-overlay-badge">2024</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-row">
+                <span class="project-cat">Packaging &amp; Physical</span>
+                <span class="project-metric-pill">$4.2M Launch</span>
+              </div>
+              <h2 class="project-title">Nordic Minimalist Outerwear</h2>
+              <p class="project-desc">
+                Architectural apparel brand architecture, lookbook art direction, and digital flagship e-commerce experience for sustainable all-weather outerwear.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Apparel Design</span>
+                <span class="tag">E-Commerce Flagship</span>
+                <span class="tag">Art Direction</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: Client Impact & Valuation Metrics Bento Grid -->
+    <section class="projects-metrics-section">
+      <div class="projects-container">
+        
+        <div class="metrics-header">
+          <div class="glass-pill-tag">
+            <span class="dot-indicator blue"></span>
+            <span>PROVEN IMPACT</span>
+          </div>
+          <h2 class="metrics-main-title">Design Engineered for Valuation, Traction &amp; Scale</h2>
+        </div>
+
+        <div class="metrics-bento-grid">
+          
+          <div class="bento-card highlight-bento">
+            <div class="bento-metric">$180M+</div>
+            <h3 class="bento-title">Total Venture Capital Raised</h3>
+            <p class="bento-desc">Capital secured by partner startups post-redesign across Series A through C rounds.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-metric">3.8x</div>
+            <h3 class="bento-title">Average Conversion Lift</h3>
+            <p class="bento-desc">Measured conversion velocity and customer activation growth across digital interfaces.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-metric">18+</div>
+            <h3 class="bento-title">International Design Awards</h3>
+            <p class="bento-desc">Recognition across Awwwards, Red Dot, FWA, and Behance Best of Interaction.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-metric">99.2%</div>
+            <h3 class="bento-title">Client Satisfaction Score</h3>
+            <p class="bento-desc">Long-term retainer retention rate with visionary founders and tech leadership.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: Collaborative CTA Banner -->
+    <section class="projects-cta-section">
+      <div class="projects-container">
+        <div class="cta-banner-card">
+          <div class="cta-banner-content">
+            <div class="glass-pill-tag">
+              <span class="dot-indicator blue"></span>
+              <span>START A COLLABORATION</span>
+            </div>
+            <h2 class="cta-banner-title">Have a visionary concept ready to shape?</h2>
+            <p class="cta-banner-desc">
+              We partner with ambitious founders and tier-one enterprises to turn raw ideas into market-dominating digital experiences.
+            </p>
+            <div class="cta-btn-group">
+              <a href="index.html#contact" class="btn-orange-pill">
+                <span>Start a Project</span>
+                <div class="icon-circle-white">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </a>
+              <a href="index.html#workflow" class="btn-outline-pill">
+                <span>Explore Workflow</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern 4-Column Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        
+        <!-- Top 4 Columns Grid -->
+        <div class="footer-grid">
+          
+          <!-- Column 1: Brand & Tagline -->
+          <div class="footer-col brand-col">
+            <a href="index.html" class="footer-brand-logo">Folioblox</a>
+            <p class="footer-tagline">
+              Crafting digital products that inspire, connect, and scale modern businesses.
+            </p>
+          </div>
+
+          <!-- Column 2: Navigation -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">NAVIGATION</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#behind-designs">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="index.html#workflow">Workflow</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">SOCIAL</h4>
+            <ul class="footer-nav-list">
+              <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a></li>
+              <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Direct Contact -->
+          <div class="footer-col direct-col">
+            <h4 class="footer-col-title">DIRECT</h4>
+            <a href="mailto:hello@folioblox.design" class="footer-direct-email">hello@folioblox.design</a>
+            <span class="footer-direct-location">New York, NY</span>
+          </div>
+
+        </div>
+
+        <!-- Bottom Sub-Footer Row -->
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">© 2026 Folioblox. All rights reserved.</p>
+          <a href="#" class="footer-back-to-top">Back to top &uarr;</a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(15px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 250);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
