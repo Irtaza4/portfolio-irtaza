@@ -345,8 +345,9 @@ body {
 .brand-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: rgba(255, 255, 255, 0.85);
+  gap: 12px;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -356,6 +357,16 @@ body {
   opacity: 1;
   color: #ffffff;
   transform: translateY(-1px);
+}
+
+.brand-real-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .brand-icon {
@@ -501,35 +512,65 @@ body {
 
 .gallery-card:hover {
   transform: translateY(-8px);
-  border-color: var(--border-glass-bright);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 84, 25, 0.1);
+  border-color: rgba(255, 84, 25, 0.38);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 84, 25, 0.15);
 }
 
-.card-image-wrap {
+/* Card Brand / Logo Showcase Area */
+.card-brand-showcase {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 75, 20, 0.12) 0%, rgba(10, 12, 18, 0.96) 75%);
   overflow: hidden;
-  background: #09090b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.card-image-wrap img {
+.card-logo-badge-box {
+  width: 110px;
+  height: 110px;
+  border-radius: 26px;
+  background: rgba(20, 22, 30, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 75, 20, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-card:hover .card-logo-badge-box {
+  transform: scale(1.1) translateY(-4px);
+  border-color: rgba(255, 75, 20, 0.5);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 75, 20, 0.4);
+}
+
+.card-main-project-logo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  object-fit: contain;
+  border-radius: 14px;
 }
 
-.gallery-card:hover .card-image-wrap img {
-  transform: scale(1.05);
+.card-logo-emoji {
+  font-size: 54px;
+  line-height: 1;
 }
 
-.card-glass-shine {
+.card-ambient-glow {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 75, 20, 0.25), transparent 70%);
   pointer-events: none;
+  filter: blur(25px);
 }
 
 .card-details {
@@ -539,9 +580,29 @@ body {
   gap: 6px;
 }
 
+.card-meta-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.card-mini-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-tag-emoji {
+  font-size: 15px;
+  line-height: 1;
+}
+
 .card-category {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11.5px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-accent);
@@ -549,10 +610,64 @@ body {
 
 .card-title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.01em;
+}
+
+.card-summary {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.card-store-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.store-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.store-badge-pill:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 84, 25, 0.35);
+}
+
+/* Portrait frame in studio */
+.portrait-cutout-frame {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 84, 25, 0.12) 0%, rgba(14, 18, 26, 0.8) 80%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 84, 25, 0.18);
+}
+
+.portrait-cutout-frame img {
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- Shared Glass Pill Tag & Dot Indicators --- */
@@ -1050,14 +1165,20 @@ body {
   color: var(--color-text-muted);
 }
 
-/* Center Image & Card Stack */
+/* Center Tag Stack (No picture frame, perfectly framing 3D model) */
 .studio-center-showcase {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  min-height: 260px;
   z-index: 4;
+  pointer-events: none;
+}
+
+.studio-center-showcase .studio-tag-pill {
+  pointer-events: auto;
 }
 
 .studio-image-frame {

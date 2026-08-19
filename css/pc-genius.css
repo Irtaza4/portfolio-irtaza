@@ -1,0 +1,40 @@
+@import url('ride-hoppy.css');
+
+:root {
+    --bg-color: #030712;
+    --second-bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --main-color: #0ea5e9;
+    --secondary-color: #6366f1;
+    --white-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, .5);
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --accent-glow: rgba(14, 165, 233, 0.3);
+}
+
+.header.sticky {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Adjustments specifically for PC Genius if needed */
+.about-content h2 span {
+    color: var(--main-color);
+}
+
+.nav-btn {
+    color: var(--main-color);
+}
+
+.btn {
+    background: var(--main-color);
+}
+
+.btn:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}

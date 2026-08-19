@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects & Archive — Folioblox</title>
-  <meta name="description" content="Explore our complete portfolio of AI interfaces, luxury branding, product designs, and digital architectures.">
+  <title>Projects &amp; Case Studies — Irtaza Khalid</title>
+  <meta name="description" content="Explore the mobile app engineering portfolio and case studies of Irtaza Khalid, Flutter Developer specializing in real-time GPS tracking, on-demand marketplaces, and scalable apps.">
   
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
     <!-- Navigation Bar -->
     <header class="navbar">
       <div class="nav-container">
-        <a href="index.html" class="brand-logo">Folioblox</a>
+        <a href="index.html" class="brand-logo">Irtaza Khalid</a>
         <nav class="nav-links">
           <a href="index.html" class="nav-link">Home</a>
           <a href="index.html#behind-designs" class="nav-link">About</a>
@@ -53,168 +53,386 @@
         
         <div class="glass-pill-tag">
           <span class="dot-indicator blue"></span>
-          <span>CURATED ARCHIVE (2022 — 2026)</span>
+          <span>CURATED CASE STUDIES &amp; ARCHIVE</span>
         </div>
 
         <div class="projects-hero-grid">
-          <h1 class="projects-hero-title">Selected Works &amp; Digital Architecture</h1>
+          <h1 class="projects-hero-title">Production Mobile Apps &amp; Real-Time Systems</h1>
           <p class="projects-hero-subtitle">
-            A comprehensive showcase of brand identities, design systems, AI SaaS interfaces, and luxury physical products crafted for high-growth global companies.
+            A comprehensive showcase of dual-application transportation platforms, WebSocket marketplaces, fintech accounting suites, and published mobile applications engineered by Irtaza Khalid.
           </p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All Works (6)</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; SaaS UI</button>
-          <button class="filter-btn" data-filter="brand">Brand &amp; Identity</button>
-          <button class="filter-btn" data-filter="physical">Packaging &amp; Physical</button>
-          <button class="filter-btn" data-filter="tech">Automotive &amp; Tech</button>
+          <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-btn" data-filter="fleet">Fleet &amp; Ride-Sharing</button>
+          <button class="filter-btn" data-filter="marketplace">Marketplaces &amp; Chat</button>
+          <button class="filter-btn" data-filter="enterprise">Fintech &amp; Enterprise</button>
+          <button class="filter-btn" data-filter="social">Entertainment &amp; Media</button>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 2: Grid of Projects / Case Studies -->
+    <!-- SECTION 2: Grid of Projects / Case Studies with REAL Images & Phone Mockups -->
     <section class="projects-showcase-section">
       <div class="projects-container">
         
         <div class="projects-main-grid" id="projects-grid">
           
-          <!-- Project 1 -->
-          <article class="project-card" data-category="ai">
-            <div class="project-media-wrap">
-              <img src="assets/ai_workspace.jpg" alt="Aether AI Workspace" loading="lazy">
-              <div class="project-overlay-badge">2025</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">AI &amp; SaaS UI</span>
-                <span class="project-metric-pill">+140% Velocity</span>
+          <!-- Project 1: B2B Cabs -->
+          <article class="project-card" data-category="fleet">
+            <div class="project-phone-stage" onclick="window.location.href='b2b-cabs.html'">
+              <div class="phone-mockup-device">
+                <div class="phone-island"></div>
+                <div class="phone-screen-viewport" data-gallery="b2b">
+                  <img src="assets/irtaza_images/B2B/1.PNG" alt="B2B Cabs Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/B2B/2.PNG" alt="B2B Cabs Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/B2B/3.PNG" alt="B2B Cabs Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/B2B/4.PNG" alt="B2B Cabs Screen 4" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Aether AI Workspace</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <img src="assets/irtaza_images/B2B/logo.png" alt="B2B Cabs Logo" class="project-avatar-logo">
+                <div>
+                  <span class="project-cat">Fleet &amp; Transportation</span>
+                  <h2 class="project-title">B2B Cabs — Employee Fleet System</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Autonomous AI workflow agent interface enabling enterprise engineering teams to coordinate distributed multi-agent systems with real-time telemetry.
+                Dual application system (Customer &amp; Driver apps) built to automate corporate employee transit. Features continuous background GPS tracking via Android Foreground Services, route navigation via Google Maps API, and FCM / OneSignal instant dispatch alerts.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Design System</span>
-                <span class="tag">AI Agent UI</span>
-                <span class="tag">Next.js</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Google Maps API</span>
+                <span class="tag">Foreground Services</span>
+                <span class="tag">OneSignal</span>
+                <span class="tag">Provider</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <div class="store-cluster-label">Live on Stores:</div>
+                  <div class="store-buttons-flex">
+                    <a href="https://apps.apple.com/us/app/b2bcabs-driver/id6670443514" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.96.04-2.12.64-2.79 1.43-.57.67-.99 1.74-.94 2.8 1.07.08 2.16-.54 2.72-1.36z"/></svg>
+                      <span>Driver App</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.btob.driver&pcampaignid=web_share" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.59 1.59 0 0 1-.22-.843V2.657c0-.317.08-.609.219-.843zm11.235 11.238l2.25 2.25-11.83 6.76 9.58-9.01zm0-2.104l-9.58-9.01 11.83 6.76-2.25 2.25zm1.538 1.052l3.418 1.954a1.44 1.44 0 0 1 0 2.092l-3.418 1.954-2.105-2.105 2.105-1.895z"/></svg>
+                      <span>Play Store</span>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/b2bcabs-company/id6670443798" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.96.04-2.12.64-2.79 1.43-.57.67-.99 1.74-.94 2.8 1.07.08 2.16-.54 2.72-1.36z"/></svg>
+                      <span>Company App</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="b2b-cabs.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-card" data-category="physical">
-            <div class="project-media-wrap">
-              <img src="assets/headphones.jpg" alt="Aura Studio Headphones" loading="lazy">
-              <div class="project-overlay-badge">2025</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">Packaging &amp; Physical</span>
-                <span class="project-metric-pill">Red Dot 2025</span>
+          <!-- Project 2: Jobsnap -->
+          <article class="project-card" data-category="marketplace">
+            <div class="project-phone-stage" onclick="window.location.href='jobsnap.html'">
+              <div class="phone-mockup-device">
+                <div class="phone-island"></div>
+                <div class="phone-screen-viewport" data-gallery="jobsnap">
+                  <img src="assets/irtaza_images/js_images/1.PNG" alt="Jobsnap Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/js_images/2.PNG" alt="Jobsnap Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/js_images/3.PNG" alt="Jobsnap Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/js_images/4.PNG" alt="Jobsnap Screen 4" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Aura Studio Headphones</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <img src="assets/irtaza_images/js_images/logo.png" alt="Jobsnap Logo" class="project-avatar-logo">
+                <div>
+                  <span class="project-cat">Marketplaces &amp; Chat</span>
+                  <h2 class="project-title">Jobsnap — On-Demand Task Marketplace</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Industrial hardware prototyping, tactile acoustic ergonomics, and precision metallic materials for high-fidelity spatial audio listening.
+                Cross-platform task hiring platform with a flexible 3-tier role architecture (User, Service Provider, Agent). Features instant real-time bidding, WebSocket chat, profile verification, and end-to-end task lifecycle.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Industrial Design</span>
-                <span class="tag">Acoustic Hardware</span>
-                <span class="tag">Brand Identity</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">OneSignal</span>
+                <span class="tag">REST API</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <div class="store-cluster-label">Live on Stores:</div>
+                  <div class="store-buttons-flex">
+                    <a href="https://apps.apple.com/us/app/hello-jobsnap/id6746465168" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.96.04-2.12.64-2.79 1.43-.57.67-.99 1.74-.94 2.8 1.07.08 2.16-.54 2.72-1.36z"/></svg>
+                      <span>App Store</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.jobsnap&pcampaignid=web_share" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.59 1.59 0 0 1-.22-.843V2.657c0-.317.08-.609.219-.843zm11.235 11.238l2.25 2.25-11.83 6.76 9.58-9.01zm0-2.104l-9.58-9.01 11.83 6.76-2.25 2.25zm1.538 1.052l3.418 1.954a1.44 1.44 0 0 1 0 2.092l-3.418 1.954-2.105-2.105 2.105-1.895z"/></svg>
+                      <span>Play Store</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="jobsnap.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="project-card" data-category="ai">
-            <div class="project-media-wrap">
-              <img src="assets/fintech_app.jpg" alt="Aura Fintech Platform" loading="lazy">
-              <div class="project-overlay-badge">2024</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">AI &amp; SaaS UI</span>
-                <span class="project-metric-pill">$1.8B Volume</span>
+          <!-- Project 3: RideHoppy -->
+          <article class="project-card" data-category="fleet">
+            <div class="project-phone-stage" onclick="window.location.href='ride-hoppy.html'">
+              <div class="phone-mockup-device">
+                <div class="phone-island"></div>
+                <div class="phone-screen-viewport" data-gallery="ridehoppy">
+                  <img src="assets/irtaza_images/rh_1.png" alt="RideHoppy Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/rh_2.png" alt="RideHoppy Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/rh_3.png" alt="RideHoppy Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/rh_4.png" alt="RideHoppy Screen 4" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Aura Global Liquidity Platform</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <div class="project-avatar-icon">🚗</div>
+                <div>
+                  <span class="project-cat">Fleet &amp; Ride-Sharing</span>
+                  <h2 class="project-title">RideHoppy — Ride-Sharing Dual App Suite</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Next-generation institutional wealth suite featuring real-time biometric verification, AI portfolio intelligence, and frictionless mobile execution.
+                Full-scale ride-hailing suite with separate Customer and Driver apps. Real-time ride requests, live driver GPS tracking, dynamic fare calculation, integrated digital wallet, and in-app trip messaging.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Fintech</span>
-                <span class="tag">Mobile UX</span>
-                <span class="tag">Data Visualization</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Firebase Auth</span>
+                <span class="tag">Google Maps API</span>
+                <span class="tag">Digital Wallet</span>
+                <span class="tag">Live GPS</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <div class="store-cluster-label">Live on Stores:</div>
+                  <div class="store-buttons-flex">
+                    <a href="https://apps.apple.com/us/app/ridehoppy-customer/id6749684430" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.96.04-2.12.64-2.79 1.43-.57.67-.99 1.74-.94 2.8 1.07.08 2.16-.54 2.72-1.36z"/></svg>
+                      <span>Customer App</span>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/ridehoppy-driver/id6749767858" target="_blank" rel="noopener" class="store-btn-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.96.04-2.12.64-2.79 1.43-.57.67-.99 1.74-.94 2.8 1.07.08 2.16-.54 2.72-1.36z"/></svg>
+                      <span>Driver App</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="ride-hoppy.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 4 -->
-          <article class="project-card" data-category="brand">
-            <div class="project-media-wrap">
-              <img src="assets/bottle.jpg" alt="Noir Botanical Serum" loading="lazy">
-              <div class="project-overlay-badge">2025</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">Brand &amp; Identity</span>
-                <span class="project-metric-pill">120k Units Sold</span>
+          <!-- Project 4: Curio Campus -->
+          <article class="project-card" data-category="marketplace">
+            <div class="project-phone-stage" onclick="window.location.href='curio-campus.html'">
+              <div class="phone-mockup-device">
+                <div class="phone-island"></div>
+                <div class="phone-screen-viewport" data-gallery="curiocampus">
+                  <img src="assets/irtaza_images/cc_screen_1.jpg" alt="Curio Campus Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/cc_screen_2.jpg" alt="Curio Campus Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/cc_screen_3.jpg" alt="Curio Campus Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/cc_screen_5.jpg" alt="Curio Campus Screen 4" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Noir Botanical Serum</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <img src="assets/irtaza_images/curio_campus_logo.png" alt="Curio Campus Logo" class="project-avatar-logo">
+                <div>
+                  <span class="project-cat">Marketplaces &amp; Community</span>
+                  <h2 class="project-title">Curio Campus — Student Skill Exchange</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Eco-luxury sustainable packaging identity, tactile basalt stone visual aesthetic, and sensory packaging system for clean clinical skincare.
+                Dedicated university community network enabling students to find emergency assistance, match skills for group projects, exchange course resources, and communicate via real-time encrypted messaging.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Luxury Packaging</span>
-                <span class="tag">Brand Strategy</span>
-                <span class="tag">3D Visuals</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Firebase Firestore</span>
+                <span class="tag">Skill Matching</span>
+                <span class="tag">Emergency Request</span>
+                <span class="tag">Direct Chat</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <span class="tag-status-live">Campus Beta Released</span>
+                </div>
+                <a href="curio-campus.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 5 -->
-          <article class="project-card" data-category="tech">
-            <div class="project-media-wrap">
-              <img src="assets/automotive_ui.jpg" alt="Hyperion EV Hypercar Telemetry" loading="lazy">
-              <div class="project-overlay-badge">2026</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">Automotive &amp; Tech</span>
-                <span class="project-metric-pill">0.02s Latency</span>
+          <!-- Project 5: Rang / Rung King (HORIZONTAL LANDSCAPE PHONE) -->
+          <article class="project-card rung-horizontal-card" data-category="social">
+            <div class="project-phone-stage horizontal-stage" onclick="window.location.href='rung-king.html'">
+              <div class="phone-mockup-device horizontal-phone">
+                <div class="phone-island horizontal-island"></div>
+                <div class="phone-screen-viewport" data-gallery="rang">
+                  <img src="assets/irtaza_images/Rung/1.PNG" alt="Rang Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/Rung/2.PNG" alt="Rang Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/Rung/3.PNG" alt="Rang Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/Rung/4.PNG" alt="Rang Screen 4" class="screen-slide">
+                  <img src="assets/irtaza_images/Rung/5.PNG" alt="Rang Screen 5" class="screen-slide">
+                  <img src="assets/irtaza_images/Rung/6.PNG" alt="Rang Screen 6" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Hyperion EV Hypercar In-Cockpit HUD</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <img src="assets/irtaza_images/Rung/rang_logo.png" alt="Rang Logo" class="project-avatar-logo">
+                <div>
+                  <span class="project-cat">Entertainment &amp; 2D Gaming</span>
+                  <h2 class="project-title">Rung King — 2D Multiplayer Card Game</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Real-time electric vehicle telemetry, adaptive cockpit HUD graphics, power distribution analytics, and biometric track telemetry.
+                Landscape 2D card game built with Flutter &amp; Flame Engine. Features real-time WebSocket online multiplayer, offline intelligent AI opponent logic, coin economy, and classic South Asian Court Piece trick-taking rules.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Automotive HMI</span>
-                <span class="tag">HUD Graphics</span>
-                <span class="tag">Real-time Telemetry</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Flame Engine</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">AI Opponents</span>
+                <span class="tag">Landscape UI</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <span class="tag-status-live">Multiplayer Live</span>
+                </div>
+                <a href="rung-king.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 6 -->
-          <article class="project-card" data-category="physical">
-            <div class="project-media-wrap">
-              <img src="assets/jacket.jpg" alt="Nordic Minimalist Outerwear" loading="lazy">
-              <div class="project-overlay-badge">2024</div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta-row">
-                <span class="project-cat">Packaging &amp; Physical</span>
-                <span class="project-metric-pill">$4.2M Launch</span>
+          <!-- Project 6: PcGenius -->
+          <article class="project-card" data-category="enterprise">
+            <div class="project-phone-stage" onclick="window.location.href='pc-genius.html'">
+              <div class="phone-mockup-device">
+                <div class="phone-island"></div>
+                <div class="phone-screen-viewport" data-gallery="pcgenius">
+                  <img src="assets/irtaza_images/pc_screenshot_1.jpg" alt="PcGenius Screen 1" class="screen-slide active">
+                  <img src="assets/irtaza_images/pc_screenshot_2.jpg" alt="PcGenius Screen 2" class="screen-slide">
+                  <img src="assets/irtaza_images/pc_screenshot_3.jpg" alt="PcGenius Screen 3" class="screen-slide">
+                  <img src="assets/irtaza_images/pc_screenshot_4.jpg" alt="PcGenius Screen 4" class="screen-slide">
+                </div>
+                <div class="phone-gallery-controls">
+                  <button class="phone-nav-btn prev" aria-label="Previous Screen">&lsaquo;</button>
+                  <span class="phone-nav-dots"></span>
+                  <button class="phone-nav-btn next" aria-label="Next Screen">&rsaquo;</button>
+                </div>
               </div>
-              <h2 class="project-title">Nordic Minimalist Outerwear</h2>
+              <div class="phone-reflection-shine"></div>
+            </div>
+            
+            <div class="project-info">
+              <div class="project-header-brand">
+                <img src="assets/irtaza_images/pc_genius_logo.png" alt="PcGenius Logo" class="project-avatar-logo">
+                <div>
+                  <span class="project-cat">Fintech &amp; Enterprise</span>
+                  <h2 class="project-title">PcGenius — Diagnostic &amp; Hardware Platform</h2>
+                </div>
+              </div>
+
               <p class="project-desc">
-                Architectural apparel brand architecture, lookbook art direction, and digital flagship e-commerce experience for sustainable all-weather outerwear.
+                Comprehensive PC diagnostic and troubleshooting companion platform. Provides real-time hardware component analysis, step-by-step diagnostic workflows, repair guides, and instant technical consultation.
               </p>
+
               <div class="project-tags">
-                <span class="tag">Apparel Design</span>
-                <span class="tag">E-Commerce Flagship</span>
-                <span class="tag">Art Direction</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Hardware Diagnostic UI</span>
+                <span class="tag">State Management</span>
+                <span class="tag">REST Integration</span>
+              </div>
+
+              <div class="project-action-strip">
+                <div class="store-links-cluster">
+                  <span class="tag-status-live">Enterprise Solution</span>
+                </div>
+                <a href="pc-genius.html" class="btn-case-study">
+                  <span>Full Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </div>
           </article>
@@ -224,42 +442,42 @@
       </div>
     </section>
 
-    <!-- SECTION 3: Client Impact & Valuation Metrics Bento Grid -->
+    <!-- SECTION 3: Client Impact & Technical Metrics Bento Grid -->
     <section class="projects-metrics-section">
       <div class="projects-container">
         
         <div class="metrics-header">
           <div class="glass-pill-tag">
             <span class="dot-indicator blue"></span>
-            <span>PROVEN IMPACT</span>
+            <span>PROVEN TRACK RECORD</span>
           </div>
-          <h2 class="metrics-main-title">Design Engineered for Valuation, Traction &amp; Scale</h2>
+          <h2 class="metrics-main-title">Engineering Standards for Reliability, Scale &amp; Speed</h2>
         </div>
 
         <div class="metrics-bento-grid">
           
           <div class="bento-card highlight-bento">
-            <div class="bento-metric">$180M+</div>
-            <h3 class="bento-title">Total Venture Capital Raised</h3>
-            <p class="bento-desc">Capital secured by partner startups post-redesign across Series A through C rounds.</p>
+            <div class="bento-metric">8+</div>
+            <h3 class="bento-title">Production Apps Built</h3>
+            <p class="bento-desc">Full-cycle mobile apps developed and deployed across Play Store &amp; App Store.</p>
           </div>
 
           <div class="bento-card">
-            <div class="bento-metric">3.8x</div>
-            <h3 class="bento-title">Average Conversion Lift</h3>
-            <p class="bento-desc">Measured conversion velocity and customer activation growth across digital interfaces.</p>
+            <div class="bento-metric">99.9%</div>
+            <h3 class="bento-title">Crash-Free Stability</h3>
+            <p class="bento-desc">Optimized rendering and resilient exception handling across low-end and flagship devices.</p>
           </div>
 
           <div class="bento-card">
-            <div class="bento-metric">18+</div>
-            <h3 class="bento-title">International Design Awards</h3>
-            <p class="bento-desc">Recognition across Awwwards, Red Dot, FWA, and Behance Best of Interaction.</p>
+            <div class="bento-metric">&lt; 50ms</div>
+            <h3 class="bento-title">Real-Time Sync Latency</h3>
+            <p class="bento-desc">Lightning-fast WebSocket bidirectionality and Foreground GPS telemetry tracking.</p>
           </div>
 
           <div class="bento-card">
-            <div class="bento-metric">99.2%</div>
-            <h3 class="bento-title">Client Satisfaction Score</h3>
-            <p class="bento-desc">Long-term retainer retention rate with visionary founders and tech leadership.</p>
+            <div class="bento-metric">100%</div>
+            <h3 class="bento-title">On-Time Sprint Delivery</h3>
+            <p class="bento-desc">Adherence to clean architecture, automated modular testing, and clear client milestones.</p>
           </div>
 
         </div>
@@ -274,11 +492,11 @@
           <div class="cta-banner-content">
             <div class="glass-pill-tag">
               <span class="dot-indicator blue"></span>
-              <span>START A COLLABORATION</span>
+              <span>GET IN TOUCH</span>
             </div>
-            <h2 class="cta-banner-title">Have a visionary concept ready to shape?</h2>
+            <h2 class="cta-banner-title">Have a mobile app concept ready to build?</h2>
             <p class="cta-banner-desc">
-              We partner with ambitious founders and tier-one enterprises to turn raw ideas into market-dominating digital experiences.
+              Whether you need a dual-app ride platform, a custom marketplace, or a high-performance cross-platform Flutter application, let's turn your vision into reality.
             </p>
             <div class="cta-btn-group">
               <a href="index.html#contact" class="btn-orange-pill">
@@ -308,9 +526,9 @@
           
           <!-- Column 1: Brand & Tagline -->
           <div class="footer-col brand-col">
-            <a href="index.html" class="footer-brand-logo">Folioblox</a>
+            <a href="index.html" class="footer-brand-logo">Irtaza Khalid</a>
             <p class="footer-tagline">
-              Crafting digital products that inspire, connect, and scale modern businesses.
+              Building production-ready Flutter applications and scalable mobile architectures.
             </p>
           </div>
 
@@ -325,29 +543,28 @@
             </ul>
           </div>
 
-          <!-- Column 3: Social -->
+          <!-- Column 3: Connect & Profiles -->
           <div class="footer-col">
-            <h4 class="footer-col-title">SOCIAL</h4>
+            <h4 class="footer-col-title">CONNECT</h4>
             <ul class="footer-nav-list">
-              <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a></li>
-              <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>
+              <li><a href="https://github.com/Irtaza4" target="_blank" rel="noopener">GitHub / Irtaza4</a></li>
+              <li><a href="https://www.linkedin.com/in/irtaza-khalid-1903a6270/" target="_blank" rel="noopener">LinkedIn / irtaza-khalid</a></li>
+              <li><a href="tel:+923084221084">+92 308 4221084</a></li>
             </ul>
           </div>
 
           <!-- Column 4: Direct Contact -->
           <div class="footer-col direct-col">
             <h4 class="footer-col-title">DIRECT</h4>
-            <a href="mailto:hello@folioblox.design" class="footer-direct-email">hello@folioblox.design</a>
-            <span class="footer-direct-location">New York, NY</span>
+            <a href="mailto:Irtazakhalidll@gmail.com" class="footer-direct-email">Irtazakhalidll@gmail.com</a>
+            <span class="footer-direct-location">Lahore, PK</span>
           </div>
 
         </div>
 
         <!-- Bottom Sub-Footer Row -->
         <div class="footer-bottom-row">
-          <p class="footer-copyright">© 2026 Folioblox. All rights reserved.</p>
+          <p class="footer-copyright">© 2026 Irtaza Khalid. All rights reserved.</p>
           <a href="#" class="footer-back-to-top">Back to top &uarr;</a>
         </div>
 
@@ -356,7 +573,219 @@
 
   </div>
 
+  <!-- Interactive Case Study Deep-Dive Modal -->
+  <div id="case-study-modal" class="case-study-modal-overlay">
+    <div class="case-study-modal-card">
+      <button class="modal-close-btn" onclick="closeCaseStudyModal()">&times;</button>
+      <div id="modal-content-body" class="modal-inner-content">
+        <!-- Injected dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Project Data for Case Study Modal
+    const caseStudiesData = {
+      b2b: {
+        title: "B2B Cabs — Corporate Employee Transportation",
+        subtitle: "Dual-Application Mobile Fleet & Tracking Platform",
+        logo: "assets/irtaza_images/B2B/logo.png",
+        category: "Fleet & Transportation • Live on iOS & Android",
+        tags: ["Flutter", "Firebase", "Maps API", "Foreground Services", "OneSignal", "FCM"],
+        overview: "B2B Cabs is a dual-app corporate transportation system built to automate employee pick-ups and drop-offs to and from the office. It consists of two separate Flutter apps — a Driver App and a Company App — giving businesses full control over employee transit while keeping drivers coordinated in real time.",
+        challenge: "Corporate employee transportation is logistically complex — multiple shifts, varying pickup locations, driver availability, and last-minute changes all need to be handled seamlessly without manual phone calls.",
+        solution: "Engineered two dedicated apps in sync: Company dashboard for scheduling and route creation, and Driver app with continuous background GPS tracking via Android Foreground Services and Google Maps turn-by-turn navigation.",
+        screens: [
+          "assets/irtaza_images/B2B/1.PNG",
+          "assets/irtaza_images/B2B/2.PNG",
+          "assets/irtaza_images/B2B/3.PNG",
+          "assets/irtaza_images/B2B/4.PNG",
+          "assets/irtaza_images/B2B/5.PNG",
+          "assets/irtaza_images/B2B/6.PNG"
+        ],
+        storeLinks: [
+          { name: "Driver App (iOS)", url: "https://apps.apple.com/us/app/b2bcabs-driver/id6670443514" },
+          { name: "Driver App (Android)", url: "https://play.google.com/store/apps/details?id=com.btob.driver&pcampaignid=web_share" },
+          { name: "Company App (iOS)", url: "https://apps.apple.com/us/app/b2bcabs-company/id6670443798" },
+          { name: "Company App (Android)", url: "https://play.google.com/store/apps/details?id=com.btob.company&pcampaignid=web_share" }
+        ]
+      },
+      jobsnap: {
+        title: "Jobsnap — On-Demand Task & Service Marketplace",
+        subtitle: "Multi-Role Real-Time Bidding & WebSocket Platform",
+        logo: "assets/irtaza_images/js_images/logo.png",
+        category: "Marketplaces & Chat • Live on iOS & Android",
+        tags: ["Flutter", "Node.js", "WebSockets", "Firebase", "OneSignal", "REST API"],
+        overview: "Jobsnap is a cross-platform task hiring platform built with Flutter. It connects users needing services with verified local professionals through real-time job bidding, instant WebSocket messaging, and status milestone tracking.",
+        challenge: "Managing asynchronous job negotiations, real-time bid updates, multi-user role permissions (Client, Provider, Agent), and sub-second chat latency across mobile clients.",
+        solution: "Engineered a reactive Flutter frontend with WebSocket bi-directional streams for real-time bid placement and direct messaging, coupled with OneSignal push notifications for instant alerts.",
+        screens: [
+          "assets/irtaza_images/js_images/1.PNG",
+          "assets/irtaza_images/js_images/2.PNG",
+          "assets/irtaza_images/js_images/3.PNG",
+          "assets/irtaza_images/js_images/4.PNG",
+          "assets/irtaza_images/js_images/5.PNG",
+          "assets/irtaza_images/js_images/6.PNG"
+        ],
+        storeLinks: [
+          { name: "Jobsnap on App Store", url: "https://apps.apple.com/us/app/hello-jobsnap/id6746465168" },
+          { name: "Jobsnap on Play Store", url: "https://play.google.com/store/apps/details?id=com.jobsnap&pcampaignid=web_share" }
+        ]
+      },
+      ridehoppy: {
+        title: "RideHoppy — Ride-Sharing Dual App Platform",
+        subtitle: "Complete Uber-like Customer & Driver Suite",
+        logo: "assets/irtaza_images/ride_hoppy_main.png",
+        category: "Fleet & Ride-Sharing • App Store Live",
+        tags: ["Flutter", "Dart", "Firebase", "Maps Integration", "Push Alerts", "Digital Wallet"],
+        overview: "A comprehensive ride-hailing suite featuring dual iOS applications for Riders and Drivers. Implements real-time ride matching, live route polyline mapping, fare estimation, and digital payment wallet.",
+        challenge: "Precise low-latency driver vehicle tracking on maps with route rotation interpolation, dynamic fare calculations based on distance/time, and seamless trip state machines.",
+        solution: "Integrated Google Maps API with custom Flutter map markers and lerped geolocation updates, Firebase Auth security rules, and real-time trip status synchronization.",
+        screens: [
+          "assets/irtaza_images/rh_1.png",
+          "assets/irtaza_images/rh_2.png",
+          "assets/irtaza_images/rh_3.png",
+          "assets/irtaza_images/rh_4.png",
+          "assets/irtaza_images/rh_app_4.png",
+          "assets/irtaza_images/rh_rider_1.png"
+        ],
+        storeLinks: [
+          { name: "Rider App (App Store)", url: "https://apps.apple.com/us/app/ridehoppy-customer/id6749684430" },
+          { name: "Driver App (App Store)", url: "https://apps.apple.com/us/app/ridehoppy-driver/id6749767858" }
+        ]
+      },
+      curiocampus: {
+        title: "Curio Campus — Student Communication & Skill Match",
+        subtitle: "Campus Peer-to-Peer Help & Exchange Network",
+        logo: "assets/irtaza_images/curio_campus_logo.png",
+        category: "Marketplaces & Community",
+        tags: ["Flutter", "Firebase Firestore", "Skill Matching", "Emergency Request", "Real-Time Chat"],
+        overview: "Curio Campus connects university students for peer-to-peer project collaboration, urgent homework/exam help, and skill barter in a trusted campus ecosystem.",
+        challenge: "Creating an intuitive UI for emergency help broadcasts while preventing notification fatigue and ensuring reliable real-time database queries.",
+        solution: "Built a high-performance Flutter interface with indexed Firestore queries, custom category badges, and instant push alerts.",
+        screens: [
+          "assets/irtaza_images/cc_screen_1.jpg",
+          "assets/irtaza_images/cc_screen_2.jpg",
+          "assets/irtaza_images/cc_screen_3.jpg",
+          "assets/irtaza_images/cc_screen_5.jpg",
+          "assets/irtaza_images/cc_screen_6.jpg"
+        ],
+        storeLinks: []
+      },
+      rang: {
+        title: "Rang (Rung King) — Visual Content & Media Platform",
+        subtitle: "Published Entertainment App on Google Play",
+        logo: "assets/irtaza_images/Rung/rang_logo.png",
+        category: "Entertainment & Media • Google Play Store Live",
+        tags: ["Flutter", "Google Play Store", "Dynamic Caching", "Custom Animations", "Clean Architecture"],
+        overview: "A lightweight, fluid multimedia exploration application published on Google Play with fast asset loading and responsive grid layouts.",
+        challenge: "Rendering high-density media feeds without memory leaks or frame drops on low-end Android hardware.",
+        solution: "Engineered modular Flutter architecture with cached network image virtualization and optimized state lifecycle management.",
+        screens: [
+          "assets/irtaza_images/Rung/1.PNG",
+          "assets/irtaza_images/Rung/2.PNG",
+          "assets/irtaza_images/Rung/3.PNG",
+          "assets/irtaza_images/Rung/4.PNG"
+        ],
+        storeLinks: []
+      },
+      pcgenius: {
+        title: "PcGenius — Diagnostic & Hardware Assistance Platform",
+        subtitle: "Step-by-Step PC Troubleshooting Companion",
+        logo: "assets/irtaza_images/pc_genius_logo.png",
+        category: "Enterprise & Diagnostic Tools",
+        tags: ["Flutter", "Hardware Diagnostic UI", "State Management", "REST Integration"],
+        overview: "A mobile diagnostic companion for computer repairs, hardware benchmarking reference, and technician workflow checklists.",
+        challenge: "Structuring complex diagnostic decision trees into simple, step-by-step mobile UI wizards.",
+        solution: "Developed an interactive wizard interface with offline caching and clear visual guides.",
+        screens: [
+          "assets/irtaza_images/pc_screenshot_1.jpg",
+          "assets/irtaza_images/pc_screenshot_2.jpg",
+          "assets/irtaza_images/pc_screenshot_3.jpg",
+          "assets/irtaza_images/pc_screenshot_4.jpg"
+        ],
+        storeLinks: []
+      }
+    };
+
+    function openCaseStudyModal(key) {
+      const data = caseStudiesData[key];
+      if (!data) return;
+
+      const modal = document.getElementById('case-study-modal');
+      const body = document.getElementById('modal-content-body');
+
+      let tagsHtml = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+      let screensHtml = data.screens.map(s => `<div class="modal-phone-screen"><img src="${s}" alt="Screen" loading="lazy"></div>`).join('');
+      
+      let storeLinksHtml = '';
+      if (data.storeLinks.length > 0) {
+        let btns = data.storeLinks.map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="store-btn-pill"><span>${l.name}</span></a>`).join('');
+        storeLinksHtml = `
+          <div class="modal-store-section">
+            <h4>Live Store Links</h4>
+            <div class="store-buttons-flex">${btns}</div>
+          </div>
+        `;
+      }
+
+      body.innerHTML = `
+        <div class="modal-header">
+          <img src="${data.logo}" alt="${data.title}" class="modal-logo-img">
+          <div>
+            <span class="modal-category">${data.category}</span>
+            <h2 class="modal-title">${data.title}</h2>
+            <p class="modal-subtitle">${data.subtitle}</p>
+          </div>
+        </div>
+
+        <div class="modal-tags-row">${tagsHtml}</div>
+
+        <div class="modal-body-grid">
+          <div class="modal-text-col">
+            <h3>Overview</h3>
+            <p>${data.overview}</p>
+            
+            <h3>The Challenge</h3>
+            <p>${data.challenge}</p>
+
+            <h3>The Engineering Solution</h3>
+            <p>${data.solution}</p>
+
+            ${storeLinksHtml}
+          </div>
+
+          <div class="modal-gallery-col">
+            <h3>Interface Gallery</h3>
+            <div class="modal-screens-grid">${screensHtml}</div>
+          </div>
+        </div>
+      `;
+
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaseStudyModal() {
+      const modal = document.getElementById('case-study-modal');
+      modal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close on click outside card
+    document.getElementById('case-study-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'case-study-modal') {
+        closeCaseStudyModal();
+      }
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCaseStudyModal();
+      }
+    });
+
     // Filter functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -370,7 +799,7 @@
 
         projectCards.forEach(card => {
           if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = 'flex';
+            card.style.display = 'grid';
             setTimeout(() => {
               card.style.opacity = '1';
               card.style.transform = 'translateY(0)';
@@ -384,6 +813,35 @@
           }
         });
       });
+    });
+
+    // Phone Carousel Script
+    document.querySelectorAll('.phone-mockup-device').forEach(device => {
+      const viewport = device.querySelector('.phone-screen-viewport');
+      const slides = viewport.querySelectorAll('.screen-slide');
+      const prevBtn = device.querySelector('.phone-nav-btn.prev');
+      const nextBtn = device.querySelector('.phone-nav-btn.next');
+      let current = 0;
+
+      function updateSlide(index) {
+        slides[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(current - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(current + 1);
+        });
+      }
     });
   </script>
 </body>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Cabs Case Study — Irtaza Khalid</title>
+  <meta name="description" content="Detailed case study of B2B Cabs — Dual-app corporate fleet transportation platform built with Flutter, Android Foreground GPS, Google Maps API, and FCM.">
+  <link rel="stylesheet" href="css/case-study-modern.css">
+</head>
+<body>
+
+  <!-- Ambient Glows -->
+  <div class="case-study-bg-glows">
+    <div class="glow-orb top-right"></div>
+    <div class="glow-orb mid-left"></div>
+    <div class="glow-orb bottom-right"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="case-header">
+    <a href="index.html" class="case-brand-logo">Irtaza Khalid</a>
+    <nav class="case-nav">
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#behind-designs">About</a>
+      <a href="index.html#projects" class="active">Projects</a>
+      <a href="index.html#contact" class="case-btn-contact">Get in touch &rarr;</a>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="case-container">
+    
+    <!-- Back Link -->
+    <div class="case-back-bar">
+      <a href="index.html#projects" class="case-back-link">&larr; Back to All Projects</a>
+    </div>
+
+    <!-- Hero Title -->
+    <div class="case-hero">
+      <div class="case-badge-pill">Enterprise Fleet Platform &bull; Published</div>
+      <div class="case-brand-header-flex">
+        <img src="assets/irtaza_images/B2B/logo.png" alt="B2B Cabs Logo" class="case-project-logo">
+        <div>
+          <h1 class="case-main-title">B2B Cabs — Corporate Fleet Platform</h1>
+        </div>
+      </div>
+      <p class="case-subtitle">
+        A dual-application corporate transit system built to automate enterprise employee pick-and-drop logistics, featuring real-time vehicle tracking, turn-by-turn route navigation, and instant dispatch notifications.
+      </p>
+    </div>
+
+    <!-- Meta & Store Links Bar -->
+    <div class="case-meta-bar">
+      <div class="meta-tags-group">
+        <span class="case-tag">Flutter &amp; Dart</span>
+        <span class="case-tag">Android Foreground GPS</span>
+        <span class="case-tag">Google Maps API</span>
+        <span class="case-tag">Firebase &amp; FCM</span>
+        <span class="case-tag">OneSignal</span>
+        <span class="case-tag">Provider State</span>
+      </div>
+
+      <div class="case-store-links">
+        <a href="https://apps.apple.com/us/app/b2bcabs-driver/id6670443514" target="_blank" rel="noopener" class="case-store-btn">
+          <span>App Store (Driver)</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.btob.driver&pcampaignid=web_share" target="_blank" rel="noopener" class="case-store-btn">
+          <span>Play Store (Driver)</span>
+        </a>
+        <a href="https://apps.apple.com/us/app/b2bcabs-company/id6670443798" target="_blank" rel="noopener" class="case-store-btn">
+          <span>App Store (Company)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Interactive Titanium Phone Mockup Showcase -->
+    <div class="case-mockup-showcase">
+      <div class="showcase-header">
+        <h2 class="showcase-title">Interactive App Screens</h2>
+        <p class="showcase-subtitle">Use the left and right navigation arrows to flip through live application interfaces</p>
+      </div>
+
+      <div class="interactive-phone-container">
+        <button class="nav-arrow-btn prev-btn" aria-label="Previous Screen">&lsaquo;</button>
+
+        <div class="titanium-phone">
+          <div class="phone-dynamic-island"></div>
+          <div class="phone-viewport">
+            <img src="assets/irtaza_images/B2B/1.PNG" class="active" alt="B2B Cabs Screen 1">
+            <img src="assets/irtaza_images/B2B/2.PNG" alt="B2B Cabs Screen 2">
+            <img src="assets/irtaza_images/B2B/3.PNG" alt="B2B Cabs Screen 3">
+            <img src="assets/irtaza_images/B2B/4.PNG" alt="B2B Cabs Screen 4">
+            <img src="assets/irtaza_images/B2B/5.PNG" alt="B2B Cabs Screen 5">
+            <img src="assets/irtaza_images/B2B/6.PNG" alt="B2B Cabs Screen 6">
+            <img src="assets/irtaza_images/B2B/7.PNG" alt="B2B Cabs Screen 7">
+            <img src="assets/irtaza_images/B2B/8.PNG" alt="B2B Cabs Screen 8">
+          </div>
+        </div>
+
+        <button class="nav-arrow-btn next-btn" aria-label="Next Screen">&rsaquo;</button>
+      </div>
+
+      <div class="phone-indicator-bar">
+        <span class="phone-counter-text"><span class="current-idx">1</span> / 8</span>
+      </div>
+    </div>
+
+    <!-- Case Study Content Sections -->
+    <div class="case-content-grid">
+      
+      <!-- Section 1: Overview & Problem -->
+      <div class="case-section-card">
+        <h3 class="case-section-heading">
+          <span class="heading-icon">&#9679;</span> Project Overview &amp; Problem Statement
+        </h3>
+        <p class="case-text">
+          Corporate transit logistics for medium to large enterprises often suffer from manual scheduling inefficiencies, opaque driver routes, and lack of real-time visibility for HR departments and employees.
+        </p>
+        <p class="case-text">
+          <strong>The Solution:</strong> B2B Cabs delivers a two-sided architecture uniting corporate clients and commercial drivers. By utilizing Android Foreground GPS services, drivers broadcast uninterrupted high-precision telemetry, allowing company admins and passengers to track fleet vehicles in real time.
+        </p>
+      </div>
+
+      <!-- Section 2: Technical Highlights -->
+      <div class="case-section-card">
+        <h3 class="case-section-heading">
+          <span class="heading-icon">&#9679;</span> Technical Architecture &amp; Key Features
+        </h3>
+        <div class="case-features-grid">
+          <div class="case-feature-item">
+            <span><strong>Continuous Foreground GPS:</strong> Custom native Android foreground service lifecycle handling to prevent OS background killing.</span>
+          </div>
+          <div class="case-feature-item">
+            <span><strong>Google Maps Route Plotting:</strong> Dynamic polyline rendering, live distance matrix calculations, and waypoint optimization.</span>
+          </div>
+          <div class="case-feature-item">
+            <span><strong>Multi-Role Dual Architecture:</strong> Distinct secure business logic for drivers and corporate client managers.</span>
+          </div>
+          <div class="case-feature-item">
+            <span><strong>Push Notifications &amp; Alerts:</strong> OneSignal &amp; FCM triggers for pickup notifications, delay warnings, and route updates.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Engineering Timeline -->
+      <div class="case-section-card">
+        <h3 class="case-section-heading">
+          <span class="heading-icon">&#9679;</span> Development Lifecycle &amp; Milestones
+        </h3>
+        <div class="case-timeline">
+          <div class="case-timeline-step">
+            <div class="case-timeline-dot"></div>
+            <span class="case-timeline-date">Phase 1</span>
+            <h4 class="case-timeline-title">Architecture Setup &amp; Map Prototyping</h4>
+            <p class="case-timeline-desc">Designed database schema, evaluated GPS background battery drain optimizations, and configured Google Cloud Maps SDK.</p>
+          </div>
+          <div class="case-timeline-step">
+            <div class="case-timeline-dot"></div>
+            <span class="case-timeline-date">Phase 2</span>
+            <h4 class="case-timeline-title">Driver &amp; Company App Implementation</h4>
+            <p class="case-timeline-desc">Built clean modular Provider state management, integrated REST endpoints with Dio, and established real-time vehicle broadcast streams.</p>
+          </div>
+          <div class="case-timeline-step">
+            <div class="case-timeline-dot"></div>
+            <span class="case-timeline-date">Phase 3</span>
+            <h4 class="case-timeline-title">QA &amp; Store Deployments</h4>
+            <p class="case-timeline-desc">Conducted extensive battery, memory, and field road tests before deploying both apps to the iOS App Store and Google Play Store.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Actions -->
+    <div class="case-bottom-actions">
+      <div>
+        <h4 style="font-family: 'Outfit'; font-size: 20px; color: #fff; margin-bottom: 4px;">Interested in building a similar platform?</h4>
+        <p style="font-size: 14px; color: var(--text-muted);">Let's discuss requirements and architecture.</p>
+      </div>
+      <a href="index.html#projects" class="btn-primary-back">&larr; Back to All Projects</a>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="case-footer">
+    <p class="case-footer-copy">&copy; 2026 Irtaza Khalid. All rights reserved.</p>
+    <div class="case-footer-links">
+      <a href="https://github.com/Irtaza4" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/irtaza-khalid-1903a6270/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:Irtazakhalidll@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <!-- Phone Carousel Interactive Script -->
+  <script>
+    const images = document.querySelectorAll('.phone-viewport img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const counter = document.querySelector('.current-idx');
+    let current = 0;
+
+    function showImage(index) {
+      images[current].classList.remove('active');
+      current = (index + images.length) % images.length;
+      images[current].classList.add('active');
+      if (counter) counter.textContent = current + 1;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => showImage(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showImage(current + 1));
+  </script>
+</body>
+</html>
