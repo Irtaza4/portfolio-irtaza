@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folioblox — Creative Director & Product Designer</title>
+  <meta name="description" content="Portfolio of Creative Director & Product Designer with smooth interactive scroll animation.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background 3D Sequence Canvas -->
+  <div id="canvas-container">
+    <canvas id="animation-canvas"></canvas>
+    
+    <!-- Minimalist preloader -->
+    <div id="loader" class="loader-overlay">
+      <div class="loader-spinner"></div>
+      <div class="loader-text" id="loader-text">Loading Experience... 0%</div>
+    </div>
+  </div>
+
+  <!-- Main Website Content Layer -->
+  <div id="page-content">
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="brand-logo">Folioblox</a>
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#behind-designs" class="nav-link">About</a>
+          <a href="#gallery" class="nav-link">Projects</a>
+        </nav>
+        <a href="#contact" class="btn-pill-nav">
+          <span>Get in touch</span>
+          <div class="icon-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Top Hero Row -->
+        <div class="hero-top-row">
+          <div class="hero-title-block">
+            <p class="hero-greeting">Hey, I'm a</p>
+            <h1 class="hero-main-title">Creative<br>Director</h1>
+          </div>
+          
+          <div class="hero-quote-block">
+            <h2 class="hero-quote-title">Great design should feel invisible.</h2>
+            <p class="hero-quote-desc">From logo to language, I build brands that connect and convert.</p>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Pillars Row -->
+        <div class="hero-pillars-row">
+          <div class="pillar-item">
+            <span class="pillar-num">#01</span>
+            <span class="pillar-title">Brand Strategy</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#02</span>
+            <span class="pillar-title">Brand Identity Design</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#03</span>
+            <span class="pillar-title">Packaging Design</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#04</span>
+            <span class="pillar-title">Creative Direction</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trusted Brands Bar -->
+    <section class="brands-section">
+      <div class="brands-container">
+        <div class="brands-label">Trusted by Brands I've Helped Shape</div>
+        <div class="brands-logos">
+          
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+            </svg>
+            <span class="brand-name">Supa Blox</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 4h12l-6 8 6 8H6l6-8-6-8z" fill="currentColor"/>
+            </svg>
+            <span class="brand-name">Hype Blox</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3a9 9 0 0 0 0 18V3z" fill="currentColor"/>
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="brand-name">Frame Blox</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="9" cy="12" r="7" fill="currentColor" opacity="0.9"/>
+              <circle cx="15" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="brand-name">Ultra Blox</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Behind the Designs Section -->
+    <section id="behind-designs" class="about-section">
+      <div class="section-container">
+        
+        <!-- Header Info Grid -->
+        <div class="about-header-grid">
+          <div class="about-left-col">
+            <span class="section-tag">Behind the Designs</span>
+            <h2 class="about-main-title">Shaping Experiences That Make Life Simpler</h2>
+          </div>
+          
+          <div class="about-right-col">
+            <p class="about-description">
+              I'm a product designer focused on building clean, intuitive interfaces that solve real-world problems.
+            </p>
+            
+            <div class="about-cta-box">
+              <div class="cta-text">
+                <span>Let's Build Something</span>
+                <span class="sub">Meaningful Together</span>
+              </div>
+              <a href="#contact" class="btn-orange-pill">
+                <span>Get in touch</span>
+                <div class="icon-circle-white">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Cards Gallery Grid -->
+        <div id="gallery" class="gallery-grid">
+          
+          <div class="gallery-card">
+            <div class="card-image-wrap">
+              <img src="assets/jacket.jpg" alt="Apparel Product Design" loading="lazy">
+              <div class="card-glass-shine"></div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">Apparel & Identity</span>
+              <h3 class="card-title">Nordic Minimalist Outerwear</h3>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="card-image-wrap">
+              <img src="assets/headphones.jpg" alt="Acoustic Audio Product Design" loading="lazy">
+              <div class="card-glass-shine"></div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">Industrial & Sound</span>
+              <h3 class="card-title">Aura Studio Headphones</h3>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="card-image-wrap">
+              <img src="assets/bottle.jpg" alt="Luxury Skincare Packaging" loading="lazy">
+              <div class="card-glass-shine"></div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">Packaging & Branding</span>
+              <h3 class="card-title">Noir Botanical Serum</h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Clean Footer -->
+    <footer id="contact" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-logo">Folioblox</div>
+          <p>© 2026 Folioblox. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#hero" class="footer-link">Back to Top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
