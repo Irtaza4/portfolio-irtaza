@@ -555,6 +555,215 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* --- Ready To Grow & Scale (Contact Inquiry) Section --- */
+.growth-section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 100px 32px 140px 32px;
+}
+
+.growth-container {
+  width: 100%;
+}
+
+.growth-header {
+  margin-bottom: 70px;
+}
+
+.growth-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.growth-headline-top {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6.5vw, 84px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.glass-badge-pill {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 18px;
+  border-radius: 14px;
+}
+
+.badge-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.badge-desc {
+  font-size: 11px;
+  color: var(--color-text-dim);
+  margin-top: 2px;
+}
+
+.growth-headline-bottom {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6.5vw, 84px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-top: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.highlight-grow {
+  color: #ffffff;
+}
+
+.scale-text {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+}
+
+/* 2-Column Minimalist Form */
+.growth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-field label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 15px;
+  font-family: var(--font-body);
+  padding: 8px 0 12px 0;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 0;
+}
+
+.form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 400;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-bottom-color: var(--color-accent);
+  box-shadow: 0 1px 0 var(--color-accent);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 28px;
+}
+
+.select-wrapper select option {
+  background-color: #121214;
+  color: #ffffff;
+  padding: 12px;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.select-wrapper select:focus ~ .select-arrow {
+  color: var(--color-accent);
+  transform: rotate(180deg);
+}
+
+/* Submit Action Button */
+.form-submit-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.btn-submit-pill {
+  width: 180px;
+  height: 52px;
+  border-radius: 999px;
+  background: rgba(20, 20, 24, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-submit-pill:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 84, 25, 0.45);
+}
+
+.btn-submit-pill svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-submit-pill:hover svg {
+  transform: translate(2px, 2px);
+}
+
 /* --- Footer --- */
 .site-footer {
   width: 100%;
@@ -652,6 +861,15 @@ body {
   .about-cta-box {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .btn-submit-pill {
+    width: 100%;
   }
 
   .footer-container {
