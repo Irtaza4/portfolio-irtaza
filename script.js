@@ -54,18 +54,14 @@
     const iw = img.naturalWidth;
     const ih = img.naturalHeight;
 
-    // Calculate aspect ratio containment
-    const scale = Math.min(cw / iw, ch / ih);
+    // Calculate aspect ratio fill (cover) to eliminate any black side bars
+    const scale = Math.max(cw / iw, ch / ih);
     const drawW = iw * scale;
     const drawH = ih * scale;
     const offsetX = (cw - drawW) / 2;
     const offsetY = (ch - drawH) / 2;
 
-    // Clear background to black
-    ctx.fillStyle = '#000000';
-    ctx.fillRect(0, 0, cw, ch);
-
-    // High quality scaling
+    // Draw frame filling the entire screen edge-to-edge
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(img, offsetX, offsetY, drawW, drawH);

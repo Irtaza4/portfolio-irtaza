@@ -52,27 +52,22 @@ body {
   height: 100vh;
   z-index: 1;
   pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 #animation-canvas {
   width: 100vw;
   height: 100vh;
   display: block;
-  object-fit: contain;
 }
 
-/* Subtle top atmospheric glow matching the reference aesthetic */
+/* Subtle atmosphere & contrast overlay to ensure content readability */
 #canvas-container::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 55vh;
-  background: radial-gradient(circle at 50% -10%, rgba(255, 75, 20, 0.22), transparent 70%);
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, transparent 40%, rgba(0, 0, 0, 0.55) 100%),
+              linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 30%, rgba(0, 0, 0, 0.75) 100%);
   pointer-events: none;
 }
 
