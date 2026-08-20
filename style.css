@@ -1497,9 +1497,9 @@ body {
 .site-footer {
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(10, 10, 14, 0.65);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   position: relative;
   z-index: 10;
   padding: 80px 0 35px 0;
