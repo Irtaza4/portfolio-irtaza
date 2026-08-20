@@ -1281,18 +1281,30 @@ body {
   z-index: 3;
 }
 
-.studio-since-tag {
-  font-size: 12.5px;
+.studio-role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.role-pill-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #ffffff;
-  display: block;
-  margin-bottom: 8px;
 }
 
 .studio-since-desc {
   font-size: 13.5px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-text-muted);
 }
 
