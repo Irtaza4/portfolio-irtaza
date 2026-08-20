@@ -1530,16 +1530,30 @@ body {
 .form-field input,
 .form-field select {
   width: 100%;
-  background: transparent;
+  background: transparent !important;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 15px;
   font-family: var(--font-body);
   padding: 8px 0 12px 0;
   outline: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
   border-radius: 0;
+}
+
+/* Fix browser autofill ugly white background */
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover, 
+.form-field input:-webkit-autofill:focus, 
+.form-field input:-webkit-autofill:active,
+.form-field select:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px #0c0d12 inset !important;
+  box-shadow: 0 0 0 1000px #0c0d12 inset !important;
+  background-color: transparent !important;
+  transition: background-color 50000s ease-in-out 0s, color 50000s ease-in-out 0s;
+  caret-color: #ffffff !important;
 }
 
 .form-field input::placeholder {

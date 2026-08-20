@@ -750,19 +750,21 @@
           </h2>
         </div>
 
-        <!-- 2-Column Minimalist Form -->
-        <form class="growth-form"
-          onsubmit="event.preventDefault(); alert('Thank you, Irtaza has received your message!');">
+        <!-- 2-Column Minimalist Form (Direct Email Integration) -->
+        <form class="growth-form" action="https://formsubmit.co/irtazakhalidll@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="🚀 New App Project Inquiry - Irtaza.codes">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
 
           <!-- Form Row 1 -->
           <div class="form-row">
             <div class="form-field">
               <label for="name">YOUR NAME*</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required>
+              <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
             </div>
             <div class="form-field">
               <label for="phone">YOUR PHONE / WHATSAPP*</label>
-              <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required>
+              <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" autocomplete="tel" required>
             </div>
           </div>
 
