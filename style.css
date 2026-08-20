@@ -498,13 +498,13 @@ body {
 }
 
 .gallery-card {
-  background: rgba(14, 14, 16, 0.6);
-  border: 1px solid var(--border-glass);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 28px;
   overflow: hidden;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -512,8 +512,9 @@ body {
 
 .gallery-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 84, 25, 0.38);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 84, 25, 0.15);
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 84, 25, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 /* Card Brand / Logo Showcase Area */
@@ -524,7 +525,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at 50% 45%, rgba(255, 75, 20, 0.12) 0%, rgba(10, 12, 18, 0.96) 75%);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -533,22 +536,24 @@ body {
   width: 110px;
   height: 110px;
   border-radius: 26px;
-  background: rgba(20, 22, 30, 0.85);
-  border: 1.5px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 75, 20, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   position: relative;
   z-index: 2;
 }
 
 .gallery-card:hover .card-logo-badge-box {
-  transform: scale(1.1) translateY(-4px);
+  transform: scale(1.08) translateY(-4px);
   border-color: rgba(255, 75, 20, 0.5);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 75, 20, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 75, 20, 0.3);
 }
 
 .card-main-project-logo {
@@ -564,13 +569,7 @@ body {
 }
 
 .card-ambient-glow {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 75, 20, 0.25), transparent 70%);
-  pointer-events: none;
-  filter: blur(25px);
+  display: none !important;
 }
 
 .card-details {
