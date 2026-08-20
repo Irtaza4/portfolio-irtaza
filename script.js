@@ -253,17 +253,92 @@
     });
   }
 
+  // --- Tech HUD Gyroscopic Wheel & Dynamic Laser Linking ---
+  const paletteSection = document.getElementById('palette');
+  const paletteHub = document.querySelector('.palette-showcase-hub');
+  const techHudWheel = document.getElementById('tech-hud-wheel');
+  const specCards = document.querySelectorAll('.color-spec-card');
+
+  function updateLeaderLine(card, leaderEl, nodeEl) {
+    if (!card || !leaderEl || !nodeEl || !paletteHub) return;
+    const hubRect = paletteHub.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const nodeRect = nodeEl.getBoundingClientRect();
+
+    // Determine whether card is on right or left side
+    const isRight = card.classList.contains('card-top-right') || card.classList.contains('card-bottom-right');
+    const cardAnchorX = isRight ? (cardRect.left - hubRect.left) : (cardRect.right - hubRect.left);
+    const cardAnchorY = (cardRect.top + cardRect.height * 0.35) - hubRect.top;
+
+    // Node center coordinates on the neon arc
+    const nodeCenterX = (nodeRect.left + nodeRect.width / 2) - hubRect.left;
+    const nodeCenterY = (nodeRect.top + nodeRect.height / 2) - hubRect.top;
+
+    leaderEl.setAttribute('d', `M ${nodeCenterX.toFixed(1)} ${nodeCenterY.toFixed(1)} L ${cardAnchorX.toFixed(1)} ${cardAnchorY.toFixed(1)}`);
+  }
+
+  let activeHoveredCard = null;
+
+  function updatePaletteScroll() {
+    if (!paletteSection || !techHudWheel) return;
+    const rect = paletteSection.getBoundingClientRect();
+    const windowH = window.innerHeight;
+
+    // As user scrolls through the palette section, rotate the ring smoothly
+    const scrollFactor = (windowH - rect.top) / (rect.height + windowH);
+    const rotationDeg = (scrollFactor * 90) - 45; // Smooth rotation
+    techHudWheel.style.transform = `rotate(${rotationDeg.toFixed(2)}deg)`;
+
+    // If a card is active, update its leader line to follow the rotating node
+    if (activeHoveredCard) {
+      const { card, leaderEl, nodeEl } = activeHoveredCard;
+      updateLeaderLine(card, leaderEl, nodeEl);
+    }
+  }
+
+  // Interactive Card <-> Node / Leader Line linking on hover
+  specCards.forEach((card) => {
+    const nodeId = card.getAttribute('data-node');
+    const arcId = card.getAttribute('data-arc');
+    const leaderId = card.getAttribute('data-leader');
+
+    const nodeEl = nodeId ? document.getElementById(nodeId) : null;
+    const arcEl = arcId ? document.getElementById(arcId) : null;
+    const leaderEl = leaderId ? document.getElementById(leaderId) : null;
+
+    card.addEventListener('mouseenter', () => {
+      if (nodeEl) nodeEl.classList.add('is-active');
+      if (arcEl) arcEl.classList.add('is-active');
+      if (leaderEl) {
+        updateLeaderLine(card, leaderEl, nodeEl);
+        leaderEl.classList.add('is-active');
+      }
+      activeHoveredCard = { card, leaderEl, nodeEl };
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (nodeEl) nodeEl.classList.remove('is-active');
+      if (arcEl) arcEl.classList.remove('is-active');
+      if (leaderEl) leaderEl.classList.remove('is-active');
+      if (activeHoveredCard && activeHoveredCard.card === card) {
+        activeHoveredCard = null;
+      }
+    });
+  });
+
   // Event Listeners
   window.addEventListener('scroll', () => {
     updateScrollTarget();
     updateActiveNavLink();
     updateWorkflowProgress();
+    updatePaletteScroll();
   }, { passive: true });
 
   window.addEventListener('resize', () => {
     resizeCanvas();
     updateScrollTarget();
     updateWorkflowProgress();
+    updatePaletteScroll();
   }, { passive: true });
 
   window.addEventListener('orientationchange', resizeCanvas, { passive: true });
@@ -273,6 +348,7 @@
   initPaths();
   updateScrollTarget();
   updateWorkflowProgress();
+  updatePaletteScroll();
   preloadImages();
   requestAnimationFrame(renderLoop);
 })();

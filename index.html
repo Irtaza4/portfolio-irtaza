@@ -520,8 +520,20 @@
         <!-- Color Wheel Hub & 4 Floating Inspector Cards -->
         <div class="palette-showcase-hub">
 
-          <!-- Central Color Arc Wheel SVG -->
-          <div class="color-wheel-wrapper">
+          <!-- Background HUD Leader Lines SVG (1:1 Pixel Coordinates) -->
+          <svg class="hud-leader-lines-svg">
+            <!-- Line to Card Top Left (Firebase) -->
+            <path id="leader-top-left" class="hud-leader-line" />
+            <!-- Line to Card Top Right (Flutter) -->
+            <path id="leader-top-right" class="hud-leader-line" />
+            <!-- Line to Card Bottom Left (Architecture) -->
+            <path id="leader-bottom-left" class="hud-leader-line" />
+            <!-- Line to Card Bottom Right (APIs) -->
+            <path id="leader-bottom-right" class="hud-leader-line" />
+          </svg>
+
+          <!-- Central Color Arc Wheel SVG (Rotates with scroll) -->
+          <div class="color-wheel-wrapper" id="tech-hud-wheel">
             <svg class="wheel-svg" viewBox="0 0 400 400">
               <!-- Outer Delicate Tech Track -->
               <circle cx="200" cy="200" r="145" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5"
@@ -529,33 +541,33 @@
               <!-- Inner Concentric Subtle Ring -->
               <circle cx="200" cy="200" r="128" fill="none" stroke="rgba(255, 84, 25, 0.15)" stroke-width="1" />
 
-              <!-- Arc 1: Translucent Neon Orange (Top) -->
-              <path d="M 160 58 A 145 145 0 0 1 290 100" fill="none" stroke="rgba(255, 84, 25, 0.55)" stroke-width="8"
+              <!-- Arc 1: Translucent Neon Orange (Top-Right) -->
+              <path id="arc-orange" class="hud-arc" d="M 200 55 A 145 145 0 0 1 345 200" fill="none" stroke="rgba(255, 84, 25, 0.55)" stroke-width="8"
                 stroke-linecap="round" />
 
-              <!-- Arc 2: Translucent Crimson Red (Right) -->
-              <path d="M 335 160 A 145 145 0 0 1 290 300" fill="none" stroke="rgba(255, 45, 85, 0.55)" stroke-width="8"
+              <!-- Arc 2: Translucent Crimson Red (Bottom-Right) -->
+              <path id="arc-red" class="hud-arc" d="M 345 200 A 145 145 0 0 1 200 345" fill="none" stroke="rgba(255, 45, 85, 0.55)" stroke-width="8"
                 stroke-linecap="round" />
 
-              <!-- Arc 3: Translucent Warm Amber (Bottom) -->
-              <path d="M 240 342 A 145 145 0 0 1 110 300" fill="none" stroke="rgba(255, 160, 51, 0.55)" stroke-width="8"
+              <!-- Arc 3: Translucent Warm Amber (Bottom-Left) -->
+              <path id="arc-amber" class="hud-arc" d="M 200 345 A 145 145 0 0 1 55 200" fill="none" stroke="rgba(255, 160, 51, 0.55)" stroke-width="8"
                 stroke-linecap="round" />
 
-              <!-- Arc 4: Translucent Platinum (Left) -->
-              <path d="M 65 240 A 145 145 0 0 1 110 100" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="8"
+              <!-- Arc 4: Translucent Platinum (Top-Left) -->
+              <path id="arc-white" class="hud-arc" d="M 55 200 A 145 145 0 0 1 200 55" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="8"
                 stroke-linecap="round" />
 
-              <!-- Micro Glowing Nodes -->
-              <circle cx="215" cy="56" r="4.5" fill="#FF5419" class="node-glow orange" />
-              <circle cx="340" cy="210" r="4.5" fill="#FF2D55" class="node-glow red" />
-              <circle cx="175" cy="344" r="4.5" fill="#FFA033" class="node-glow amber" />
-              <circle cx="60" cy="190" r="4.5" fill="#FFFFFF" class="node-glow white" />
+              <!-- 4 Micro Glowing Nodes exactly on each quadrant arc -->
+              <circle id="node-top-right" cx="302" cy="98" r="5" fill="#FF5419" class="node-glow orange" />
+              <circle id="node-bottom-right" cx="302" cy="302" r="5" fill="#FF2D55" class="node-glow red" />
+              <circle id="node-bottom-left" cx="98" cy="302" r="5" fill="#FFA033" class="node-glow amber" />
+              <circle id="node-top-left" cx="98" cy="98" r="5" fill="#FFFFFF" class="node-glow white" />
             </svg>
           </div>
 
-          <!-- 4 Floating Glass Spec Cards -->
+          <!-- 4 Floating Glass Spec Cards (Linked to HUD nodes) -->
           <!-- Card 1: Flutter Framework (Top Right) -->
-          <div class="color-spec-card card-top-right">
+          <div class="color-spec-card card-top-right" data-node="node-top-right" data-arc="arc-orange" data-leader="leader-top-right">
             <div class="spec-card-header">
               <span class="color-title">Flutter &amp; Dart</span>
               <span class="spec-close">&times;</span>
@@ -577,7 +589,7 @@
           </div>
 
           <!-- Card 2: Firebase & Cloud (Top Left) -->
-          <div class="color-spec-card card-top-left">
+          <div class="color-spec-card card-top-left" data-node="node-top-left" data-arc="arc-white" data-leader="leader-top-left">
             <div class="spec-card-header">
               <span class="color-title">Firebase &amp; Real-time</span>
               <span class="spec-close">&times;</span>
@@ -599,7 +611,7 @@
           </div>
 
           <!-- Card 3: APIs & Real-Time Networking (Bottom Right) -->
-          <div class="color-spec-card card-bottom-right">
+          <div class="color-spec-card card-bottom-right" data-node="node-bottom-right" data-arc="arc-red" data-leader="leader-bottom-right">
             <div class="spec-card-header">
               <span class="color-title">APIs &amp; WebSockets</span>
               <span class="spec-close">&times;</span>
@@ -622,7 +634,7 @@
           </div>
 
           <!-- Card 4: State & Architecture (Bottom Left) -->
-          <div class="color-spec-card card-bottom-left">
+          <div class="color-spec-card card-bottom-left" data-node="node-bottom-left" data-arc="arc-amber" data-leader="leader-bottom-left">
             <div class="spec-card-header">
               <span class="color-title">Clean Architecture</span>
               <span class="spec-close">&times;</span>

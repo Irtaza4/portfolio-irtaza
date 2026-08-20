@@ -964,6 +964,33 @@ body {
   justify-content: center;
 }
 
+/* Background HUD Leader Lines SVG */
+.hud-leader-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.hud-leader-line {
+  fill: none;
+  stroke: #ff5419;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 5 6;
+  opacity: 0;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.hud-leader-line.is-active {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(255, 84, 25, 0.95));
+}
+
 .color-wheel-wrapper {
   position: relative;
   width: 400px;
@@ -971,14 +998,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
   mix-blend-mode: screen;
+  transition: transform 0.1s linear;
 }
 
 .wheel-svg {
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 0 20px rgba(255, 84, 25, 0.35));
+}
+
+.hud-arc {
+  transition: stroke 0.4s ease, stroke-width 0.4s ease, filter 0.4s ease;
+}
+
+.hud-arc.is-active {
+  stroke-width: 12 !important;
+  stroke: #ff5419 !important;
+  filter: drop-shadow(0 0 16px rgba(255, 84, 25, 1)) !important;
+}
+
+.node-glow {
+  transition: r 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.node-glow.is-active {
+  r: 7.5 !important;
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 1)) !important;
 }
 
 .node-glow.white {
@@ -1008,15 +1055,23 @@ body {
   border-radius: 18px;
   padding: 18px 20px;
   z-index: 3;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.color-spec-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.03) !important;
-  border-color: rgba(255, 84, 25, 0.45);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 84, 25, 0.2);
+.color-spec-card:hover,
+.color-spec-card.is-active {
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 84, 25, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 84, 25, 0.25);
+}
+
+.color-spec-card:hover .data-pct,
+.color-spec-card.is-active .data-pct {
+  color: #ff5419;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 84, 25, 0.6);
 }
 
 .card-top-right {
