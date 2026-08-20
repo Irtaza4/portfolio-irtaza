@@ -1531,6 +1531,7 @@ body {
 .form-field select {
   width: 100%;
   background: transparent !important;
+  background-color: transparent !important;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff !important;
@@ -1542,17 +1543,18 @@ body {
   border-radius: 0;
 }
 
-/* Fix browser autofill ugly white background */
+/* 100% Transparent Autofill (No black box, completely see-through portrait) */
 .form-field input:-webkit-autofill,
 .form-field input:-webkit-autofill:hover, 
 .form-field input:-webkit-autofill:focus, 
 .form-field input:-webkit-autofill:active,
 .form-field select:-webkit-autofill {
   -webkit-text-fill-color: #ffffff !important;
-  -webkit-box-shadow: 0 0 0 1000px #0c0d12 inset !important;
-  box-shadow: 0 0 0 1000px #0c0d12 inset !important;
+  -webkit-box-shadow: 0 0 0 0 transparent inset !important;
+  box-shadow: 0 0 0 0 transparent inset !important;
   background-color: transparent !important;
-  transition: background-color 50000s ease-in-out 0s, color 50000s ease-in-out 0s;
+  background: transparent !important;
+  transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s;
   caret-color: #ffffff !important;
 }
 
