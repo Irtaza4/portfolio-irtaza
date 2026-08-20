@@ -743,107 +743,174 @@ body {
   padding-top: 10px;
 }
 
-/* Sprint Board Flow */
-.sprint-board {
+/* --- Connected Interactive Workflow Flow --- */
+.workflow-interactive-flow {
   position: relative;
   width: 100%;
-  min-height: 380px;
-  padding: 40px 0;
-  margin-bottom: 30px;
+  min-height: 730px;
+  margin: 40px 0 60px 0;
 }
 
-.sprint-grid-background {
+.workflow-curves-svg {
   position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  pointer-events: none;
-}
-
-.sprint-guide-line {
-  border-right: 1px dashed rgba(255, 255, 255, 0.14);
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.sprint-guide-line:last-child {
-  border-right: none;
+.workflow-mask-line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 32;
+  stroke-linecap: round;
 }
 
-.sprint-flow-grid {
+.workflow-guide-dots {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 0 18;
+}
+
+.workflow-active-dots {
+  fill: none;
+  stroke: #ff5419;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 0 18;
+  filter: drop-shadow(0 0 12px rgba(255, 84, 25, 0.95));
+}
+
+.workflow-cards-canvas {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  width: 100%;
+  min-height: 700px;
   z-index: 2;
 }
 
-.sprint-column {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+/* Individual Workflow Step Card (Transparent Glass) */
+.workflow-step-card {
+  position: absolute;
+  width: 275px;
+  padding: 22px 24px 26px 24px;
+  border-radius: 26px;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px) scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.sprint-pill {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: rgba(15, 17, 24, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 12px 14px 12px 16px;
-  border-radius: 999px;
+/* Revealed State as user scrolls */
+.workflow-step-card.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.workflow-step-card:hover,
+.workflow-step-card.is-active {
+  border-color: rgba(255, 84, 25, 0.6);
+  background: rgba(255, 255, 255, 0.03) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 84, 25, 0.2);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Card Pin / Notch Dot */
+.card-notch-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 40%, #888888 100%);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  margin: 0 auto 14px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.workflow-step-card:hover .card-notch-dot,
+.workflow-step-card.is-active .card-notch-dot {
+  background: radial-gradient(circle, #ffffff 50%, #ff5419 100%);
+  box-shadow: 0 0 10px rgba(255, 84, 25, 0.8);
+}
+
+.step-card-num {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.step-card-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
   color: #ffffff;
-  font-size: 13.5px;
-  font-weight: 500;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  cursor: default;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
 }
 
-.sprint-pill:hover {
-  transform: translateY(-3px);
-  border-color: rgba(61, 126, 255, 0.4);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(61, 126, 255, 0.2);
+.step-card-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
 }
 
-.pill-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
+/* True Zig-Zag Spatial Placements: Left -> Right -> Left -> Right */
+.workflow-step-card.step-1 {
+  top: 10px;
+  left: 3%;
 }
 
-.pill-svg {
-  width: 16px;
-  height: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  flex-shrink: 0;
+.workflow-step-card.step-2 {
+  top: 160px;
+  right: 3%;
 }
 
-.pill-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.workflow-step-card.step-3 {
+  top: 330px;
+  left: 5%;
 }
 
-.pill-badge {
-  background: #ffffff;
-  color: #000000;
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
-  flex-shrink: 0;
+.workflow-step-card.step-4 {
+  top: 490px;
+  right: 5%;
 }
 
-.offset-middle {
-  margin-top: 70px;
-}
-
-.offset-low {
-  margin-top: 130px;
+/* Responsive for Tablet & Mobile */
+@media (max-width: 900px) {
+  .workflow-interactive-flow {
+    min-height: auto;
+  }
+  .workflow-curves-svg {
+    display: none;
+  }
+  .workflow-cards-canvas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: auto;
+  }
+  .workflow-step-card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100%;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
 }
 
 .workflow-footer-note {

@@ -416,102 +416,76 @@
           </div>
         </div>
 
-        <!-- Interactive Sprint Stepper Flow -->
-        <div class="sprint-board">
+        <!-- Connected Interactive Workflow Path -->
+        <div class="workflow-interactive-flow">
 
-          <!-- 4 Stage Column Guide Lines -->
-          <div class="sprint-grid-background">
-            <div class="sprint-guide-line"></div>
-            <div class="sprint-guide-line"></div>
-            <div class="sprint-guide-line"></div>
-            <div class="sprint-guide-line"></div>
-          </div>
+          <!-- SVG Connecting Curves Behind Cards (Zig-Zag) -->
+          <svg class="workflow-curves-svg" viewBox="0 0 1000 740" preserveAspectRatio="none">
+            <defs>
+              <!-- Reveal Masks for genuine dot uncovering -->
+              <mask id="mask-path-1-2">
+                <path id="mask-line-1-2" class="workflow-mask-line" d="M 310 110 C 480 80, 560 200, 690 260" />
+              </mask>
+              <mask id="mask-path-2-3">
+                <path id="mask-line-2-3" class="workflow-mask-line" d="M 690 280 C 560 360, 460 380, 330 430" />
+              </mask>
+              <mask id="mask-path-3-4">
+                <path id="mask-line-3-4" class="workflow-mask-line" d="M 330 450 C 460 520, 560 540, 670 590" />
+              </mask>
+            </defs>
 
-          <!-- Staggered Sprint Stage Pills -->
-          <div class="sprint-flow-grid">
+            <!-- Background Static Dotted Guide Paths (Faint white circular dots) -->
+            <path class="workflow-guide-dots" d="M 310 110 C 480 80, 560 200, 690 260" />
+            <path class="workflow-guide-dots" d="M 690 280 C 560 360, 460 380, 330 430" />
+            <path class="workflow-guide-dots" d="M 330 450 C 460 520, 560 540, 670 590" />
 
-            <!-- Stage Column 1: Foundation -->
-            <div class="sprint-column col-1">
-              <div class="sprint-pill">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-                  <span class="pill-text">Requirements &amp; Schema</span>
-                </div>
-                <span class="pill-badge">Phase 01</span>
-              </div>
+            <!-- Animated Glowing Orange Circular Dots (Revealed dot-by-dot via scroll mask) -->
+            <path class="workflow-active-dots" mask="url(#mask-path-1-2)" d="M 310 110 C 480 80, 560 200, 690 260" />
+            <path class="workflow-active-dots" mask="url(#mask-path-2-3)" d="M 690 280 C 560 360, 460 380, 330 430" />
+            <path class="workflow-active-dots" mask="url(#mask-path-3-4)" d="M 330 450 C 460 520, 560 540, 670 590" />
+          </svg>
 
-              <div class="sprint-pill">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                  </svg>
-                  <span class="pill-text">Clean Architecture Setup</span>
-                </div>
-                <span class="pill-badge">Phase 01</span>
-              </div>
+          <!-- 4 Staggered Connected Cards (True Zig-Zag: Left -> Right -> Left -> Right) -->
+          <div class="workflow-cards-canvas">
+
+            <!-- Card 01: Plan -->
+            <div class="workflow-step-card step-1" data-step="1">
+              <div class="card-notch-dot"></div>
+              <div class="step-card-num">01</div>
+              <h3 class="step-card-title">Plan</h3>
+              <p class="step-card-desc">
+                Analyzing requirements, user journeys, data schemas, and defining the core technical architecture.
+              </p>
             </div>
 
-            <!-- Stage Column 2: Core State & Engine -->
-            <div class="sprint-column col-2">
-              <div class="sprint-pill offset-middle">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="3" y1="9" x2="21" y2="9"></line>
-                    <line x1="9" y1="21" x2="9" y2="9"></line>
-                  </svg>
-                  <span class="pill-text">State &amp; Provider Flow</span>
-                </div>
-                <span class="pill-badge">Phase 02</span>
-              </div>
+            <!-- Card 02: Design -->
+            <div class="workflow-step-card step-2" data-step="2">
+              <div class="card-notch-dot"></div>
+              <div class="step-card-num">02</div>
+              <h3 class="step-card-title">Design</h3>
+              <p class="step-card-desc">
+                Crafting clean architecture, intuitive interfaces, and pixel-perfect wireframes that guarantee an engaging user experience.
+              </p>
             </div>
 
-            <!-- Stage Column 3: Backend & Integrations -->
-            <div class="sprint-column col-3">
-              <div class="sprint-pill">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-                    </path>
-                  </svg>
-                  <span class="pill-text">APIs &amp; Cloud Integrations</span>
-                </div>
-                <span class="pill-badge">Phase 03</span>
-              </div>
-
-              <div class="sprint-pill">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                    </path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                  </svg>
-                  <span class="pill-text">Auth, Push &amp; Data Sync</span>
-                </div>
-                <span class="pill-badge">Phase 03</span>
-              </div>
+            <!-- Card 03: Develop -->
+            <div class="workflow-step-card step-3" data-step="3">
+              <div class="card-notch-dot"></div>
+              <div class="step-card-num">03</div>
+              <h3 class="step-card-title">Develop</h3>
+              <p class="step-card-desc">
+                Building scalable state management and responsive Flutter frontends using modern clean architecture &amp; robust APIs.
+              </p>
             </div>
 
-            <!-- Stage Column 4: QA & Launch -->
-            <div class="sprint-column col-4">
-              <div class="sprint-pill offset-low">
-                <div class="pill-content">
-                  <svg class="pill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                  <span class="pill-text">QA &amp; Store Publishing</span>
-                </div>
-                <span class="pill-badge">Phase 04</span>
-              </div>
+            <!-- Card 04: Deploy -->
+            <div class="workflow-step-card step-4" data-step="4">
+              <div class="card-notch-dot"></div>
+              <div class="step-card-num">04</div>
+              <h3 class="step-card-title">Deploy</h3>
+              <p class="step-card-desc">
+                Rigorous testing, performance optimization, and seamless deployment to Play Store and App Store.
+              </p>
             </div>
 
           </div>
