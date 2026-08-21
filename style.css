@@ -315,12 +315,12 @@ body {
 }
 
 .brands-container {
-  background: rgba(14, 14, 16, 0.7);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border-glass);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  padding: 24px 36px;
+  padding: 22px 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -366,7 +366,7 @@ body {
   border-radius: 6px;
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(0, 0, 0, 0.4);
+  background: transparent;
 }
 
 .brand-icon {
