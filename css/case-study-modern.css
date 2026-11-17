@@ -142,6 +142,47 @@ body {
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.2);
 }
 
+.case-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.case-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 75, 20, 0.5);
+}
+
+.case-menu-toggle span {
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.case-menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.case-menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.case-menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Main Container */
 .case-container {
   position: relative;
@@ -687,13 +728,14 @@ body {
   }
   
   .case-container {
-    padding: 110px 16px 60px;
+    padding: 110px 20px 60px;
   }
   
   .titanium-phone.horizontal-phone {
     width: 100%;
     max-width: 480px;
-    height: 250px;
+    aspect-ratio: 600 / 310;
+    height: auto;
   }
 
   .case-section-card {
@@ -701,32 +743,152 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .interactive-phone-container {
-    gap: 12px;
+@media (max-width: 768px) {
+  .case-header {
+    padding: 14px 20px;
   }
 
-  .nav-arrow-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+  .case-brand-logo {
+    font-size: 19px;
   }
 
-  .titanium-phone {
-    width: 220px;
-    height: 460px;
-    border-radius: 36px;
+  .case-menu-toggle {
+    display: inline-flex;
   }
 
-  .titanium-phone.horizontal-phone {
-    width: 290px;
-    height: 155px;
-    border-radius: 24px;
+  .case-nav {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 20px;
+    right: 20px;
+    background: rgba(12, 14, 20, 0.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 20px;
+    padding: 12px 20px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+
+  .case-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .case-nav a:not(.case-btn-contact) {
+    width: 100%;
+    padding: 13px 4px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .case-btn-contact {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  .case-hero {
+    margin-bottom: 32px;
+  }
+
+  .case-brand-header-flex {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .case-project-logo,
+  .case-project-logo-emoji {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 26px;
+    flex-shrink: 0;
   }
 
   .case-meta-bar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .case-mockup-showcase {
+    margin: 36px 0 48px;
+    padding: 32px 16px;
+  }
+
+  .showcase-title {
+    font-size: 22px;
+  }
+
+  .case-bottom-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+
+  .btn-primary-back {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .interactive-phone-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 24px;
+  }
+
+  .titanium-phone {
+    order: -1;
+    width: 240px;
+    height: 506px;
+    border-radius: 38px;
+    margin: 0 calc(50% - 120px);
+  }
+
+  .titanium-phone.horizontal-phone {
+    order: -1;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 600 / 310;
+    height: auto;
+    border-radius: 24px;
+    border-width: 6px;
+    margin: 0;
+  }
+
+  .titanium-phone.horizontal-phone .phone-dynamic-island {
+    left: 10px;
+    width: 14px;
+    height: 48px;
+  }
+
+  .nav-arrow-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .phone-indicator-bar {
+    margin-top: 16px;
+  }
+
+  .case-features-grid {
+    grid-template-columns: 1fr;
   }
 
   .case-footer {

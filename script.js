@@ -25,10 +25,26 @@
   }
 
   // Configure high-DPI canvas size matching window viewport
-  function resizeCanvas() {
+  let lastViewportWidth = 0;
+  let lastViewportHeight = 0;
+
+  function resizeCanvas(force = false) {
     const dpr = Math.min(window.devicePixelRatio || 1, 2); // Optimized crispness
     const displayWidth = window.innerWidth;
     const displayHeight = window.innerHeight;
+
+    // Ignore minor vertical address-bar resize events on mobile to prevent canvas jumps
+    if (
+      !force &&
+      displayWidth < 768 &&
+      displayWidth === lastViewportWidth &&
+      Math.abs(displayHeight - lastViewportHeight) < 120
+    ) {
+      return;
+    }
+
+    lastViewportWidth = displayWidth;
+    lastViewportHeight = displayHeight;
 
     if (canvas.width !== displayWidth * dpr || canvas.height !== displayHeight * dpr) {
       canvas.width = displayWidth * dpr;
@@ -260,6 +276,7 @@
   const specCards = document.querySelectorAll('.color-spec-card');
 
   function updateLeaderLine(card, leaderEl, nodeEl) {
+    if (window.innerWidth <= 1024) return;
     if (!card || !leaderEl || !nodeEl || !paletteHub) return;
     const hubRect = paletteHub.getBoundingClientRect();
     const cardRect = card.getBoundingClientRect();
@@ -326,6 +343,35 @@
     });
   });
 
+  // Mobile Navigation Menu Toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const navLinksContainer = document.getElementById('nav-links');
+
+  if (mobileMenuToggle && navLinksContainer) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinksContainer.classList.toggle('is-open');
+      mobileMenuToggle.classList.toggle('is-open', isOpen);
+      mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('is-open');
+        mobileMenuToggle.classList.remove('is-open');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLinksContainer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        navLinksContainer.classList.remove('is-open');
+        mobileMenuToggle.classList.remove('is-open');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // Event Listeners
   window.addEventListener('scroll', () => {
     updateScrollTarget();
@@ -341,10 +387,10 @@
     updatePaletteScroll();
   }, { passive: true });
 
-  window.addEventListener('orientationchange', resizeCanvas, { passive: true });
+  window.addEventListener('orientationchange', () => resizeCanvas(true), { passive: true });
 
   // Initialize
-  resizeCanvas();
+  resizeCanvas(true);
   initPaths();
   updateScrollTarget();
   updateWorkflowProgress();
