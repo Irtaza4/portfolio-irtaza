@@ -1698,6 +1698,10 @@ body {
   transition: transform 0.2s ease;
 }
 
+.submit-btn-text {
+  display: none;
+}
+
 .btn-submit-pill:hover svg {
   transform: translate(2px, 2px);
 }
@@ -2141,58 +2145,180 @@ body {
     font-size: clamp(52px, 17vw, 100px);
   }
 
+  /* --- Mobile Contact / Inquiry Section Polish --- */
+  .growth-header {
+    margin-bottom: 28px;
+  }
+
+  .growth-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .glass-badge-pill {
+    order: -1;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: rgba(12, 14, 20, 0.72);
+  }
+
   .growth-headline-top,
   .growth-headline-bottom {
-    font-size: clamp(34px, 10vw, 56px);
+    font-size: clamp(32px, 9.5vw, 52px);
+    line-height: 1.05;
+  }
+
+  .growth-headline-bottom {
+    margin-top: 4px;
+    gap: 8px;
   }
 
   .growth-form {
-    gap: 28px;
+    gap: 22px;
+    background: rgba(10, 12, 18, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    padding: 24px 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
   }
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 22px;
+  }
+
+  .form-field label {
+    font-size: 11px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.75);
   }
 
   .form-field input,
   .form-field select {
-    font-size: 16px; /* Prevents iOS Safari auto-zoom on focus */
+    font-size: 15px;
+    padding: 6px 0 10px 0;
+    border-bottom-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .form-field input::placeholder {
+    color: rgba(255, 255, 255, 0.48);
+  }
+
+  .form-submit-row {
+    margin-top: 6px;
   }
 
   .btn-submit-pill {
     width: 100%;
+    height: 50px;
+    gap: 10px;
+    background: linear-gradient(135deg, #ff5e20, #ff4310);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(255, 84, 25, 0.35);
   }
 
+  .submit-btn-text {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+  }
+
+  /* --- Mobile Footer Polish --- */
   .site-footer {
-    padding: 56px 0 30px 0;
-    margin-top: 40px;
+    padding: 40px 0 28px 0;
+    margin-top: 24px;
+    background: linear-gradient(180deg, rgba(8, 10, 16, 0.75) 0%, rgba(5, 6, 10, 0.94) 100%) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .footer-container {
     padding: 0 20px;
-    gap: 40px;
+    gap: 28px;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+  }
+
+  .footer-col.brand-col {
+    grid-column: 1 / -1;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-brand-logo {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .footer-tagline {
+    font-size: 13.5px;
+    max-width: 100%;
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+    margin-bottom: 12px;
+    color: var(--color-accent);
+  }
+
+  .footer-nav-list {
+    gap: 10px;
+  }
+
+  .footer-nav-list li a {
+    font-size: 13.5px;
+  }
+
+  .footer-col.direct-col {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer-col.direct-col .footer-col-title {
+    margin-bottom: 2px;
+  }
+
+  .footer-direct-email {
+    font-size: 15px;
+    margin-bottom: 0;
+    word-break: break-all;
   }
 
   .footer-bottom-row {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    gap: 12px;
+  }
+
+  .footer-copyright,
+  .footer-back-to-top {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 420px) {
-  .btn-pill-nav span {
-    display: none;
-  }
-
   .btn-pill-nav {
-    padding: 6px;
+    padding: 5px 5px 5px 12px;
+    font-size: 12px;
+    gap: 6px;
   }
 
   .brands-logos {
