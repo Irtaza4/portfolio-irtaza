@@ -387,7 +387,7 @@ body {
 .brands-logos {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
